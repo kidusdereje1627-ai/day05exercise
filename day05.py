@@ -20,8 +20,8 @@ class Account:
 
 
 class SavingsAccount(Account):
-    def init(self, owner, balance=0, interest_rate=0.05):
-        super().init(owner, balance)
+    def __init__(self, owner, balance=0, interest_rate=0.05):
+        super().__init__(owner, balance)
         self.interest_rate = interest_rate
 
     def add_interest(self):
@@ -30,8 +30,8 @@ class SavingsAccount(Account):
 
 
 class CurrentAccount(Account):
-    def init(self, owner, balance=0, overdraft=500):
-        super().init(owner, balance)
+    def __init__(self, owner, balance=0, overdraft=500):
+        super().__init__(owner, balance)
         self.overdraft = overdraft
 
     def withdraw(self, amount):
